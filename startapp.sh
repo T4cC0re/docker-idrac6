@@ -3,6 +3,8 @@
 RED='\033[0;31m'
 NC='\033[0m'
 
+feh --bg-fill /dell.png
+
 echo "Starting"
 
 if [ -z "${IDRAC_HOST}" ]; then

@@ -1,23 +1,15 @@
 version: '2'
 
 services:
-  idrac1:
-    image: domistyle/idrac6
+  idrac:
+    image: t4cc0re/idrac6
+    build: .
     restart: always
     ports:
       - 5800:5800
-      - 5900:5900
     environment:
-      - IDRAC_HOST=idrac1.example.org
+      - IDRAC_HOST=idrac1.example.com
       - IDRAC_USER=root
       - IDRAC_PASSWORD=1234
-  idrac2:
-    image: domistyle/idrac6
-    restart: always
-    ports:
-      - 5801:5800
-      - 5901:5900
-    environment:
-      - IDRAC_HOST=idrac2.example.org
-      - IDRAC_USER=root
-      - IDRAC_PASSWORD=1234
+      - DISPLAY_WIDTH=1920
+      - DISPLAY_HEIGHT=1080
